@@ -27,6 +27,6 @@
             app:destination="@id/firstFragment" />
         <argument
             android:name="data"
-            app:argType="java.lang.String"/>
+            app:argType="gaur.himanshu.august.navigationcomponenets.SendMyData"/>
     </fragment>
 </navigation>

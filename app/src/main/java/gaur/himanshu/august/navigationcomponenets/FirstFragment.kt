@@ -37,12 +37,18 @@ class FirstFragment : Fragment() {
 
 
         val button=view.findViewById<Button>(R.id.send)
-        val editText=view.findViewById<EditText>(R.id.edit_text)
+        val firstName=view.findViewById<EditText>(R.id.first_name)
+        val middleName=view.findViewById<EditText>(R.id.middle_name)
+        val lastName=view.findViewById<EditText>(R.id.last_name)
 
 
 
         button.setOnClickListener {
-            val bundle= bundleOf("data" to editText.text.toString())
+            val firstNameButton=firstName.text.toString()
+            val middleNameButton=middleName.text.toString()
+            val lastNameButton=lastName.text.toString()
+            val sendData=SendMyData(firstNameButton,middleNameButton,lastNameButton)
+            val bundle= bundleOf("data" to sendData)
             navController.navigate(R.id.action_firstFragment_to_secondFragment,bundle)
         }
 

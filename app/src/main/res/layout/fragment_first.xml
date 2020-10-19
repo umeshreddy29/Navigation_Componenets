@@ -6,19 +6,38 @@
     tools:context=".FirstFragment">
 
     <EditText
-        android:id="@+id/edit_text"
+        android:id="@+id/first_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:hint="Enter data"
+        android:layout_margin="8dp"
+        android:hint="first name" />
+
+    <EditText
+        android:id="@+id/middle_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/first_name"
+        android:layout_margin="8dp"
+        android:hint="middle name"
+        android:padding="10dp" />
+
+    <EditText
+        android:id="@+id/last_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/middle_name"
+        android:layout_margin="8dp"
+        android:hint="last name"
         android:padding="10dp" />
 
     <Button
         android:id="@+id/send"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/edit_text"
+        android:layout_below="@+id/last_name"
         android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
         android:text="send data" />
 
 

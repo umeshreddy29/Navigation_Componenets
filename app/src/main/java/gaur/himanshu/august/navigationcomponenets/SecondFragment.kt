@@ -19,10 +19,10 @@ class SecondFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-val views=inflater.inflate(R.layout.fragment_second, container, false)
-        val data = requireArguments().get("data")
+        val views = inflater.inflate(R.layout.fragment_second, container, false)
+        val data = requireArguments().get("data") as SendMyData
         val text = views.findViewById<TextView>(R.id.text_string)
-        text.text = data.toString()
+        text.text = "${data.firstName}  ${data.middleName}  ${data.lastName}"
         // Inflate the layout for this fragment
         return views
     }
