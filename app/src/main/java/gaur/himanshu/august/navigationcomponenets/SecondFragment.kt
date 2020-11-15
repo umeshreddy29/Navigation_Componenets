@@ -6,8 +6,12 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.navArgs
 
 class SecondFragment : Fragment() {
+
+
+    val args: SecondFragmentArgs by navArgs()
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -20,9 +24,14 @@ class SecondFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val views = inflater.inflate(R.layout.fragment_second, container, false)
-        val data = requireArguments().get("data") as SendMyData
+        val data = args.myData
+
+        // val data = requireArguments().get("data") as SendMyData
         val text = views.findViewById<TextView>(R.id.text_string)
-        text.text = "${data.firstName}  ${data.middleName}  ${data.lastName}"
+
+        text.text = "${data!!.firstName}  ${data.middleName}  ${data.lastName}"
+
+
         // Inflate the layout for this fragment
         return views
     }

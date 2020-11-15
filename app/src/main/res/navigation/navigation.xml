@@ -16,6 +16,11 @@
         <action
             android:id="@+id/action_firstFragment_to_secondFragment"
             app:destination="@id/secondFragment" />
+        <argument
+            android:name="safe_args"
+            app:argType="gaur.himanshu.august.navigationcomponenets.SendMyData[]"
+            app:nullable="true"
+            android:defaultValue="@null" />
     </fragment>
     <fragment
         android:id="@+id/secondFragment"
@@ -26,7 +31,11 @@
             android:id="@+id/action_secondFragment_to_firstFragment"
             app:destination="@id/firstFragment" />
         <argument
-            android:name="data"
-            app:argType="gaur.himanshu.august.navigationcomponenets.SendMyData"/>
+            android:name="my_data"
+            app:argType="gaur.himanshu.august.navigationcomponenets.SendMyData"
+            app:nullable="true"
+            android:defaultValue="@null" />
+
+
     </fragment>
 </navigation>
