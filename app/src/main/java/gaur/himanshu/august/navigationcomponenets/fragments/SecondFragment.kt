@@ -1,4 +1,4 @@
-package gaur.himanshu.august.navigationcomponenets
+package gaur.himanshu.august.navigationcomponenets.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,6 +7,8 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.navArgs
+
+import gaur.himanshu.august.navigationcomponenets.R
 
 class SecondFragment : Fragment() {
 
@@ -29,7 +31,7 @@ class SecondFragment : Fragment() {
         // val data = requireArguments().get("data") as SendMyData
         val text = views.findViewById<TextView>(R.id.text_string)
 
-        text.text = "${data!!.firstName}  ${data.middleName}  ${data.lastName}"
+    //    text.text = "${data!!.firstName}  ${data.middleName}  ${data.lastName}"
 
 
         // Inflate the layout for this fragment

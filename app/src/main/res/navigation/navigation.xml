@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/firstFragment"
-        android:name="gaur.himanshu.august.navigationcomponenets.FirstFragment"
+        android:name="gaur.himanshu.august.navigationcomponenets.fragments.FirstFragment"
         android:label="fragment_first"
         tools:layout="@layout/fragment_first"
         app:popUpTo="@id/firstFragment"
@@ -21,10 +21,19 @@
             app:argType="gaur.himanshu.august.navigationcomponenets.SendMyData[]"
             app:nullable="true"
             android:defaultValue="@null" />
+        <action
+            android:id="@+id/action_firstFragment_to_thirdFragment"
+            app:destination="@id/thirdFragment" />
+        <action
+            android:id="@+id/action_firstFragment_to_fourthFragment"
+            app:destination="@id/fourthFragment" />
+        <action
+            android:id="@+id/action_firstFragment_to_fifthFragment"
+            app:destination="@id/fifthFragment" />
     </fragment>
     <fragment
         android:id="@+id/secondFragment"
-        android:name="gaur.himanshu.august.navigationcomponenets.SecondFragment"
+        android:name="gaur.himanshu.august.navigationcomponenets.fragments.SecondFragment"
         android:label="fragment_second"
         tools:layout="@layout/fragment_second" >
         <action
@@ -38,4 +47,19 @@
 
 
     </fragment>
+    <fragment
+        android:id="@+id/fifthFragment"
+        android:name="gaur.himanshu.august.navigationcomponenets.fragments.FifthFragment"
+        android:label="fragment_fifth"
+        tools:layout="@layout/fragment_fifth" />
+    <fragment
+        android:id="@+id/fourthFragment"
+        android:name="gaur.himanshu.august.navigationcomponenets.fragments.FourthFragment"
+        android:label="fragment_fourth"
+        tools:layout="@layout/fragment_fourth" />
+    <fragment
+        android:id="@+id/thirdFragment"
+        android:name="gaur.himanshu.august.navigationcomponenets.fragments.ThirdFragment"
+        android:label="fragment_third"
+        tools:layout="@layout/fragment_third" />
 </navigation>
