@@ -51,7 +51,11 @@
         android:id="@+id/fifthFragment"
         android:name="gaur.himanshu.august.navigationcomponenets.fragments.FifthFragment"
         android:label="fragment_fifth"
-        tools:layout="@layout/fragment_fifth" />
+        tools:layout="@layout/fragment_fifth">
+        <action
+            android:id="@+id/action_fifthFragment_to_sheetFragment"
+            app:destination="@id/sheetFragment" />
+    </fragment>
     <fragment
         android:id="@+id/fourthFragment"
         android:name="gaur.himanshu.august.navigationcomponenets.fragments.FourthFragment"
@@ -62,4 +66,9 @@
         android:name="gaur.himanshu.august.navigationcomponenets.fragments.ThirdFragment"
         android:label="fragment_third"
         tools:layout="@layout/fragment_third" />
+    <dialog
+        android:id="@+id/sheetFragment"
+        android:name="gaur.himanshu.august.navigationcomponenets.fragments.SheetFragment"
+        android:label="fragment_sheet"
+        tools:layout="@layout/fragment_sheet" />
 </navigation>
