@@ -60,7 +60,11 @@
         android:id="@+id/fourthFragment"
         android:name="gaur.himanshu.august.navigationcomponenets.fragments.FourthFragment"
         android:label="fragment_fourth"
-        tools:layout="@layout/fragment_fourth" />
+        tools:layout="@layout/fragment_fourth">
+        <action
+            android:id="@+id/action_fourthFragment_to_secondFragment"
+            app:destination="@id/secondFragment" />
+    </fragment>
     <fragment
         android:id="@+id/thirdFragment"
         android:name="gaur.himanshu.august.navigationcomponenets.fragments.ThirdFragment"
